@@ -1,5 +1,12 @@
 def array_unique(arrayA, arrayB):
     # your code here
+    result = []
+
+    for num in arrayA:
+        if num not in arrayB:
+            result.append(num)
+    return result
+    # print(result)
     return ''
 
 if __name__ == '__main__':

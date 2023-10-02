@@ -1,5 +1,14 @@
 def caesar(offset, input_str):
-    return ''
+    ans = ""
+    for i in range (len(input_str)):
+        ch = input_str [i] 
+        if (ch.isupper()):
+            ans += chr((ord(ch)+offset-65)%26+65)
+        # elif ch ==" ":
+        #     ans += " "
+        else :
+            ans += chr((ord(ch)+offset-97)%26+97)
+    return ans
 
 if __name__ == '__main__':
     print(caesar(3, "abc")) # def
